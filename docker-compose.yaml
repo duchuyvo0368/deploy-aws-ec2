@@ -1,0 +1,73 @@
+services:
+  frontend:
+    build:
+      dockerfile: Dockerfile
+      context: ./eCommerce_Reactjs
+    container_name: frontend
+    ports:
+      - '3000:3000'
+    environment:
+      - REACT_APP_BACKEND_URL=http://localhost:8003
+      - REACT_APP_IS_LOCALHOST=1
+      - REACT_APP_FACEBOOK_APP_ID=572043240792
+      - REACT_APP_ROUTER_BASE_NAME=frontend
+    networks:
+      - network
+    restart: unless-stopped
+    healthcheck:
+      test: [ 'CMD', 'curl', '-f', 'http://localhost:3000' ]
+
+  backend:
+    build:
+      dockerfile: Dockerfile
+      context: ./ecomAPI
+    container_name: backend
+    ports:
+      - '8003:8003'
+    environment:
+      - PORT=8003
+      - NODE_ENV=development
+      - URL_REACT=http://frontend:5000
+      - EMAIL_APP_PASSWORD=mmjsosujkqttctyd
+      - EMAIL_APP=voduchuy016688@gmail.com
+      - JWT_SECRET=bingo27062000
+      - VNP_TMNCODE=H78YYX0Z
+      - VNP_HASHSECRET=FPDHQTHPZYXKWOJWSUYMOIBNRIWEBJZW
+      - VNP_URL=https://sandbox.vnpayment.vn/paymentv2/vpcpay.html
+      - VNP_RETURNURL=http://localhost:5000/payment/vnpay_return
+      - DATE_VNPAYMENT=20281230161257
+    networks:
+      - network
+    restart: unless-stopped
+    healthcheck:
+      test: [ 'CMD', 'curl', '-f', 'http://backend:8003/health' ]
+
+  mysql:
+    image: mysql:latest
+    container_name: ecom-mysql
+    restart: unless-stopped
+    ports:
+      - '3306:3306'
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456
+      - MYSQL_DATABASE=ecom
+    command: --max_allowed_packet=128M
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./mysql/ecom.sql:/docker-entrypoint-initdb.d/ecom.sql
+    networks:
+      - network
+    healthcheck:
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost", "-p123456" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+volumes:
+  db_data:
+
+
+networks:
+  network:
+    driver: bridge

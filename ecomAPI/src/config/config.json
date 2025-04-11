@@ -1,0 +1,28 @@
+{
+    "development": {
+        "username": "root",
+        "password": "123456",
+        "database": "ecom",
+        "host": "mysql",
+        "dialect": "mysql",
+        "logging": false,
+        "query": {
+            "raw": true
+        },
+        "timezone": "+07:00"
+    },
+    "test": {
+        "username": "root",
+        "password": "123456",
+        "database": "ecom",
+        "host": "mysql",
+        "dialect": "mysql"
+    },
+    "production": {
+        "username": "root",
+        "password": "123456",
+        "database": "ecom",
+        "host": "mysql",
+        "dialect": "mysql"
+    }
+}
