@@ -2,7 +2,9 @@
     "name": "ecommerce",
     "version": "0.1.0",
     "private": true,
-    
+    "engines": {
+        "node": "14.17.2"
+    },
     "dependencies": {
         "@reduxjs/toolkit": "^2.3.0",
         "@syncfusion/ej2-react-calendars": "^20.2.43",
