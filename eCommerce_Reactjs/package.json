@@ -11,22 +11,18 @@
         "@testing-library/jest-dom": "^5.14.1",
         "@testing-library/react": "^11.2.7",
         "@testing-library/user-event": "^12.8.3",
-        "ajv": "^8.17.1",
-        "ajv-keywords": "^5.1.0",
-        "axios": "^1.8.4",
-        "bootstrap": "^5.3.5",
+        "axios": "^0.21.1",
+        "bootstrap": "^4.6.0",
         "chart.js": "^3.6.0",
         "connected-react-router": "^6.9.1",
         "dotenv": "^8.2.0",
         "eslint-plugin-react-hooks": "^5.1.0-rc-c11c9510-20241120",
-        "firebase": "^11.6.0",
-        "gh-pages": "^6.3.0",
+        "firebase": "^9.8.4",
         "jquery": "^3.7.1",
         "lodash": "^4.17.21",
         "markdown-it": "^12.1.0",
         "moment": "^2.29.0",
         "node-sass": "^6.0.0",
-        "path-browserify": "^1.0.1",
         "persist": "^0.2.7",
         "react": "^17.0.2",
         "react-chartjs-2": "^4.0.0",
@@ -42,7 +38,7 @@
         "react-redux": "^7.2.9",
         "react-router": "^5.2.1",
         "react-router-dom": "^5.3.0",
-        "react-scripts": "^5.0.1",
+        "react-scripts": "4.0.3",
         "react-select": "^5.1.0",
         "react-slick": "^0.28.1",
         "react-social-login-buttons": "^3.6.1",
@@ -59,12 +55,10 @@
         "xlsx": "^0.18.5"
     },
     "scripts": {
-        "build": "craco build",
         "start": "react-scripts start",
+        "build": "CI=false react-scripts build",
         "test": "react-scripts test",
-        "eject": "react-scripts eject",
-        "predeploy": "npm run build",
-        "deploy": "gh-pages -d build"
+        "eject": "react-scripts eject"
     },
     "eslintConfig": {
         "extends": [
@@ -83,12 +77,5 @@
             "last 1 firefox version",
             "last 1 safari version"
         ]
-    },
-    "devDependencies": {
-        "firebase-tools": "^13.2.1",
-        "terser-webpack-plugin": "^5.3.14",
-        "webpack": "^5.99.5",
-        "webpack-cli": "^6.0.1"
-    },
-    "homepage": "http://deploy-aws-ec2.github.io/eCommerce_Reactjs"
+    }
 }
