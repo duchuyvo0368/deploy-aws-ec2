@@ -1,7 +1,9 @@
-# Sử dụng image chính thức của Node.js phiên bản 14
 FROM node:14
 WORKDIR /eCommerce_Reactjs
 COPY package*.json ./
-RUN npm install
+RUN npm install --legacy-peer-deps
+RUN npm audit fix || true
+RUN npm audit fix --force || true
 COPY . .
-CMD npm run start
+RUN npm run build
+CMD ["npm", "start"]
