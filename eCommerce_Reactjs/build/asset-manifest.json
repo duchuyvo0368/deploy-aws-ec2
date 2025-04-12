@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/deploy-aws-ec2/eCommerce_Reactjs/static/css/main.8553a2ed.chunk.css",
+    "main.js": "/deploy-aws-ec2/eCommerce_Reactjs/static/js/main.d5447d19.chunk.js",
+    "main.js.map": "/deploy-aws-ec2/eCommerce_Reactjs/static/js/main.d5447d19.chunk.js.map",
+    "runtime-main.js": "/deploy-aws-ec2/eCommerce_Reactjs/static/js/runtime-main.9da33d2f.js",
+    "runtime-main.js.map": "/deploy-aws-ec2/eCommerce_Reactjs/static/js/runtime-main.9da33d2f.js.map",
+    "static/css/2.04bc16d2.chunk.css": "/deploy-aws-ec2/eCommerce_Reactjs/static/css/2.04bc16d2.chunk.css",
+    "static/js/2.7952839b.chunk.js": "/deploy-aws-ec2/eCommerce_Reactjs/static/js/2.7952839b.chunk.js",
+    "static/js/2.7952839b.chunk.js.map": "/deploy-aws-ec2/eCommerce_Reactjs/static/js/2.7952839b.chunk.js.map",
+    "static/js/3.77a19b25.chunk.js": "/deploy-aws-ec2/eCommerce_Reactjs/static/js/3.77a19b25.chunk.js",
+    "static/js/3.77a19b25.chunk.js.map": "/deploy-aws-ec2/eCommerce_Reactjs/static/js/3.77a19b25.chunk.js.map",
+    "index.html": "/deploy-aws-ec2/eCommerce_Reactjs/index.html",
+    "static/css/2.04bc16d2.chunk.css.map": "/deploy-aws-ec2/eCommerce_Reactjs/static/css/2.04bc16d2.chunk.css.map",
+    "static/css/main.8553a2ed.chunk.css.map": "/deploy-aws-ec2/eCommerce_Reactjs/static/css/main.8553a2ed.chunk.css.map",
+    "static/js/2.7952839b.chunk.js.LICENSE.txt": "/deploy-aws-ec2/eCommerce_Reactjs/static/js/2.7952839b.chunk.js.LICENSE.txt",
+    "static/media/applyVoucher.191a6d60.jfif": "/deploy-aws-ec2/eCommerce_Reactjs/static/media/applyVoucher.191a6d60.jfif",
+    "static/media/banner-voucher.e137c578.png": "/deploy-aws-ec2/eCommerce_Reactjs/static/media/banner-voucher.e137c578.png",
+    "static/media/slick-theme.css": "/deploy-aws-ec2/eCommerce_Reactjs/static/media/slick.c94f7671.ttf",
+    "static/media/voucher-all.b8ad6cbd.jfif": "/deploy-aws-ec2/eCommerce_Reactjs/static/media/voucher-all.b8ad6cbd.jfif",
+    "static/media/voucher-today.2ae3f207.png": "/deploy-aws-ec2/eCommerce_Reactjs/static/media/voucher-today.2ae3f207.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9da33d2f.js",
+    "static/css/2.04bc16d2.chunk.css",
+    "static/js/2.7952839b.chunk.js",
+    "static/css/main.8553a2ed.chunk.css",
+    "static/js/main.d5447d19.chunk.js"
+  ]
+}

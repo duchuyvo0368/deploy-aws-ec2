@@ -2,6 +2,9 @@
     "name": "ecommerce",
     "version": "0.1.0",
     "private": true,
+    "engines": {
+        "node": "14.17.2"
+    },
     "dependencies": {
         "@reduxjs/toolkit": "^2.3.0",
         "@syncfusion/ej2-react-calendars": "^20.2.43",
@@ -13,13 +16,16 @@
         "chart.js": "^3.6.0",
         "connected-react-router": "^6.9.1",
         "dotenv": "^8.2.0",
+        "eslint": "^7.11.0",
+        "eslint-config-react-app": "^6.0.0",
         "eslint-plugin-react-hooks": "^5.1.0-rc-c11c9510-20241120",
         "firebase": "^9.8.4",
+        "gh-pages": "^6.3.0",
         "jquery": "^3.7.1",
         "lodash": "^4.17.21",
         "markdown-it": "^12.1.0",
         "moment": "^2.29.0",
-        "node-sass": "^6.0.0",
+        "node-sass": "^6.0.1",
         "persist": "^0.2.7",
         "react": "^17.0.2",
         "react-chartjs-2": "^4.0.0",
@@ -35,7 +41,7 @@
         "react-redux": "^7.2.9",
         "react-router": "^5.2.1",
         "react-router-dom": "^5.3.0",
-        "react-scripts": "4.0.3",
+        "react-scripts": "^4.0.3",
         "react-select": "^5.1.0",
         "react-slick": "^0.28.1",
         "react-social-login-buttons": "^3.6.1",
@@ -53,9 +59,11 @@
     },
     "scripts": {
         "start": "react-scripts start",
-        "build": "CI=false react-scripts build",
+        "build": "react-scripts build",
         "test": "react-scripts test",
-        "eject": "react-scripts eject"
+        "eject": "react-scripts eject",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build"
     },
     "eslintConfig": {
         "extends": [
@@ -74,5 +82,9 @@
             "last 1 firefox version",
             "last 1 safari version"
         ]
+    },
+    "homepage": "https://duchuyvo.github.io/deploy-aws-ec2/eCommerce_Reactjs",
+    "devDependencies": {
+        "@babel/core": "^7.21.0"
     }
 }
