@@ -3,13 +3,13 @@ import 'firebase/compat/auth';
 import { getAuth } from 'firebase/auth'
 import { initializeApp } from 'firebase/app'
 const firebaseConfig = {
-  apiKey: "AIzaSyBlSxjIDYq8W1l97LuVZl_Sg5OIjgvWyZc",
-  authDomain: "ecom-app-21d8a.firebaseapp.com",
-  projectId: "ecom-app-21d8a",
-  storageBucket: "ecom-app-21d8a.firebasestorage.app",
-  messagingSenderId: "457535747513",
-  appId: "1:457535747513:web:551c80dfb8e78eced27268",
-  measurementId: "G-20GP30B0MZ"
+    apiKey: 'AIzaSyCjR-KqxwzDB_k4vDy4BIbO_5h4ko8ecq8',
+    authDomain: 'fashionshop-e032e.firebaseapp.com',
+    projectId: 'fashionshop-e032e',
+    storageBucket: 'fashionshop-e032e.firebasestorage.app',
+    messagingSenderId: '490934149844',
+    appId: '1:490934149844:web:b672c3cdd500732658d141',
+    measurementId: 'G-XTFDTTHFXY',
 };
 
 // Initialize Firebase
