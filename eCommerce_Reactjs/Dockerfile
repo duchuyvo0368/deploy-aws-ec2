@@ -1,23 +1,15 @@
-# Build React app
+# --- Build Phase ---
 FROM node:16 AS build
-
-WORKDIR /eCommerce_Reactjs
+WORKDIR /app
 COPY package*.json ./
-RUN npm install
+RUN npm install --legacy-peer-deps
 COPY . .
 RUN npm run build
 
-# Serve static files with serve
-FROM node:16-slim
-
-# Cài serve để phục vụ build
-RUN npm install -g serve
-
+# --- Serve Phase ---
+FROM node:16
 WORKDIR /app
+RUN npm install -g serve
 COPY --from=build /app/build ./build
-
-# Expose port (Render sẽ mặc định dùng 3000)
-
-
-# Serve build folder trên port 3000
-CMD ["serve", "-s", "build", "-l"]
+EXPOSE 3000
+CMD ["serve", "-s", "build", "-l", "3000"]
