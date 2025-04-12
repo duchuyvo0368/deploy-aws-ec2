@@ -1,18 +1,24 @@
-import firebase from 'firebase/compat/app';
-import 'firebase/compat/auth';
-import { getAuth } from 'firebase/auth'
-import { initializeApp } from 'firebase/app'
+// Import các thư viện cần thiết từ Firebase v9
+import { initializeApp } from 'firebase/app';
+import { getAuth } from 'firebase/auth';
+import { getAnalytics } from 'firebase/analytics';
+
+// Firebase configuration của bạn
 const firebaseConfig = {
-    apiKey: 'AIzaSyCjR-KqxwzDB_k4vDy4BIbO_5h4ko8ecq8',
-    authDomain: 'fashionshop-e032e.firebaseapp.com',
-    projectId: 'fashionshop-e032e',
-    storageBucket: 'fashionshop-e032e.firebasestorage.app',
-    messagingSenderId: '490934149844',
-    appId: '1:490934149844:web:b672c3cdd500732658d141',
-    measurementId: 'G-XTFDTTHFXY',
+    apiKey: 'AIzaSyCA2H9cogV4GHVIgV5mqRq74ipCxHUbtc4',
+    authDomain: 'fashion-app-4cc5c.firebaseapp.com',
+    projectId: 'fashion-app-4cc5c',
+    storageBucket: 'fashion-app-4cc5c.firebasestorage.app',
+    messagingSenderId: '71999066182',
+    appId: '1:71999066182:web:2d73d1de36af5ed9d63a47',
+    measurementId: 'G-N8BWPBV7ML',
 };
 
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig)
-export default firebase;
-export const authentication = getAuth(initializeApp(firebaseConfig))
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
+// Cung cấp đối tượng auth và export
+const auth = getAuth(app);
+
+export { auth, analytics };

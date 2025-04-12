@@ -1,0 +1,86 @@
+[debug] [2025-04-12T12:29:50.442Z] ----------------------------------------------------------------------
+[debug] [2025-04-12T12:29:50.443Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\duchuy\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2025-04-12T12:29:50.444Z] CLI Version:   9.23.0
+[debug] [2025-04-12T12:29:50.444Z] Platform:      win32
+[debug] [2025-04-12T12:29:50.444Z] Node Version:  v16.16.0
+[debug] [2025-04-12T12:29:50.445Z] Time:          Sat Apr 12 2025 19:29:50 GMT+0700 (Giờ Đông Dương)
+[debug] [2025-04-12T12:29:50.445Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-04-12T12:29:50.450Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-04-12T12:29:50.450Z] > authorizing via signed-in user (voh67983@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\Users\duchuy\Backend\NodejsProject\Project\ecomResource\eCommerce_Reactjs
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using fashionshop-e032e. 
+[debug] [2025-04-12T12:30:00.905Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/fashionshop-e032e [none]
+[debug] [2025-04-12T12:30:01.312Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/fashionshop-e032e 403
+[debug] [2025-04-12T12:30:01.313Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/fashionshop-e032e {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2025-04-12T12:30:01.313Z] HTTP Error: 403, The caller does not have permission
+[debug] [2025-04-12T12:30:01.449Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at module.exports (C:\Users\duchuy\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:38:12)
+    at Client.doRequest (C:\Users\duchuy\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:241:23)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async Client.request (C:\Users\duchuy\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:96:20)
+    at async Object.getFirebaseProject (C:\Users\duchuy\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:290:21)
+    at async Object.doSetup [as project] (C:\Users\duchuy\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\project.js:77:27)
+    at async init (C:\Users\duchuy\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\index.js:19:9)
+[error] 
+[error] Error: Failed to get Firebase project fashionshop-e032e. Please make sure the project exists and your account has permission to access it.
+[debug] [2025-04-12T12:34:34.655Z] ----------------------------------------------------------------------
+[debug] [2025-04-12T12:34:34.657Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\duchuy\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2025-04-12T12:34:34.657Z] CLI Version:   9.23.0
+[debug] [2025-04-12T12:34:34.657Z] Platform:      win32
+[debug] [2025-04-12T12:34:34.657Z] Node Version:  v16.16.0
+[debug] [2025-04-12T12:34:34.665Z] Time:          Sat Apr 12 2025 19:34:34 GMT+0700 (Giờ Đông Dương)
+[debug] [2025-04-12T12:34:34.665Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-04-12T12:34:34.672Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-04-12T12:34:34.673Z] > authorizing via signed-in user (voh67983@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\Users\duchuy\Backend\NodejsProject\Project\ecomResource\eCommerce_Reactjs
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using fashionshop-e032e. 
+[debug] [2025-04-12T12:34:49.486Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/fashionshop-e032e [none]
+[debug] [2025-04-12T12:34:49.902Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/fashionshop-e032e 403
+[debug] [2025-04-12T12:34:49.902Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/fashionshop-e032e {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2025-04-12T12:34:49.902Z] HTTP Error: 403, The caller does not have permission
+[debug] [2025-04-12T12:34:50.082Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at module.exports (C:\Users\duchuy\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:38:12)
+    at Client.doRequest (C:\Users\duchuy\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:241:23)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async Client.request (C:\Users\duchuy\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:96:20)
+    at async Object.getFirebaseProject (C:\Users\duchuy\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:290:21)
+    at async Object.doSetup [as project] (C:\Users\duchuy\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\project.js:77:27)
+    at async init (C:\Users\duchuy\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\index.js:19:9)
+[error] 
+[error] Error: Failed to get Firebase project fashionshop-e032e. Please make sure the project exists and your account has permission to access it.
