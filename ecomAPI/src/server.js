@@ -36,11 +36,11 @@ initwebRoutes(app);
 
 const server = http.createServer(app);
 
-const socketIo = require("socket.io")(server, {
+const socketIo = require('socket.io')(server, {
     cors: {
-        origin: "*",
-    }
-  }); 
+        origin: 'https://your-backend.onrender.com',
+    },
+}); 
 socketIo.on("connection", (socket) => { 
     console.log("New client connected" + socket.id); 
   

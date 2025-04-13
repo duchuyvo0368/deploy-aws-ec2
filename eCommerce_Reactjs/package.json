@@ -79,7 +79,6 @@
             "last 1 safari version"
         ]
     },
-    "homepage": "https://duchuyvo.github.io/deploy-aws-ec2/eCommerce_Reactjs",
     "devDependencies": {
         "@babel/core": "^7.21.0"
     }
