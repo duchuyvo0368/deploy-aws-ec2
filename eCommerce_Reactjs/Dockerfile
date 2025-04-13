@@ -11,5 +11,5 @@ FROM node:16
 WORKDIR /eCommerce_Reactjs
 RUN npm install -g serve
 COPY --from=build /eCommerce_Reactjs/build ./build
-EXPOSE 3000
+EXPOSE 5000
 CMD ["serve", "-s", "build", "-l", "3000"]
