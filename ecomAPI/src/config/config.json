@@ -1,7 +1,7 @@
 {
     "development": {
         "username": "root",
-        "password": "123456",
+        "password": "Voduchuy123!",
         "database": "ecom",
         "host": "127.0.0.1",
         "dialect": "mysql",
@@ -13,14 +13,14 @@
     },
     "test": {
         "username": "root",
-        "password": "123456",
+        "password": "Voduchuy123!",
         "database": "ecom",
         "host": "mysql",
         "dialect": "mysql"
     },
     "production": {
         "username": "root",
-        "password": "123456",
+        "password": "Voduchuy123!",
         "database": "ecom",
         "host": "mysql",
         "dialect": "mysql"
