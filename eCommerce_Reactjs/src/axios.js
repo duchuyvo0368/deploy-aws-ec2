@@ -3,7 +3,7 @@ import _ from "lodash";
 require("dotenv").config();
 
 const instance = axios.create({
-    baseURL: process.env.REACT_APP_BACKEND_URL || 'http://localhost:8003',
+    baseURL: process.env.REACT_APP_BACKEND_URL || 'https://13.250.11.133',
 
     //  withCredentials: true
 });
