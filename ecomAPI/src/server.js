@@ -14,11 +14,16 @@ app.set('trust proxy', true);
 
 // CORS configuration
 app.use(function (req, res, next) {
-    // Website you wish to allow to connect
-    res.setHeader(
-        'Access-Control-Allow-Origin',
-        process.env.URL_REACT || 'https://deploy-aws-ec2-1.onrender.com/',
+    const origin = req.headers.origin;
+    // Remove trailing slash from allowed origins
+    const allowedOrigins = [process.env.URL_REACT, 'https://deploy-aws-ec2-1.onrender.com'].map(
+        (url) => (url ? url.replace(/\/$/, '') : ''),
     );
+
+    // Check if the request origin is in our allowed origins
+    if (origin && allowedOrigins.includes(origin.replace(/\/$/, ''))) {
+        res.setHeader('Access-Control-Allow-Origin', origin);
+    }
 
     // Request methods you wish to allow
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
@@ -27,11 +32,23 @@ app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type,Authorization');
 
     // Set to true if you need the website to include cookies in the requests sent
-    // to the API (e.g. in case you use sessions)
     res.setHeader('Access-Control-Allow-Credentials', true);
 
-    // Pass to next layer of middleware
+    // Handle preflight requests
+    if (req.method === 'OPTIONS') {
+        return res.status(200).end();
+    }
+
     next();
+});
+
+// Error handling middleware
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).json({
+        error: 'Something went wrong!',
+        message: err.message,
+    });
 });
 
 app.use(bodyParser.json({ limit: '50mb' }));
@@ -44,7 +61,10 @@ const server = http.createServer(app);
 
 const socketIo = require('socket.io')(server, {
     cors: {
-        origin: process.env.URL_REACT || 'https://deploy-aws-ec2-1.onrender.com/',
+        // Use the same CORS configuration as the main app
+        origin: [process.env.URL_REACT, 'https://deploy-aws-ec2-1.onrender.com'].map((url) =>
+            url ? url.replace(/\/$/, '') : '',
+        ),
         methods: ['GET', 'POST'],
         credentials: true,
     },

@@ -3,7 +3,7 @@ import _ from 'lodash';
 require('dotenv').config();
 
 const instance = axios.create({
-    baseURL: process.env.REACT_APP_BACKEND_URL || 'https://localhost:443',
+    baseURL: process.env.REACT_APP_BACKEND_URL || 'https://13.229.202.21/',
     timeout: 30000, // timeout after 30 seconds
     headers: {
         'Content-Type': 'application/json',
@@ -30,6 +30,14 @@ instance.interceptors.response.use(
     (error) => {
         if (error.code === 'ECONNABORTED') {
             console.log('Request timed out');
+        }
+        if (error.response) {
+            console.log(error.response.data);
+            console.log(error.response.status);
+        } else if (error.request) {
+            console.log('No response received:', error.request);
+        } else {
+            console.log('Error setting up request:', error.message);
         }
         return Promise.reject(error);
     },
