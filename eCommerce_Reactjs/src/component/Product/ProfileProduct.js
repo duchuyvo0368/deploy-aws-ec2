@@ -1,14 +1,14 @@
 import React from 'react';
 
 function ProfileProduct(props) {
-    let data = props.data
+    let data = props.data;
     return (
         <div className="table-responsive">
             <table className="table">
                 <tbody>
                     <tr>
                         <td>
-                            <h5>Chiều rộng</h5>
+                            <h5>Width</h5>
                         </td>
                         <td>
                             <h5>{data.width}</h5>
@@ -16,7 +16,7 @@ function ProfileProduct(props) {
                     </tr>
                     <tr>
                         <td>
-                            <h5>Chiều dài</h5>
+                            <h5>Length</h5>
                         </td>
                         <td>
                             <h5>{data.height}</h5>
@@ -24,7 +24,7 @@ function ProfileProduct(props) {
                     </tr>
                     <tr>
                         <td>
-                            <h5>Khối lượng</h5>
+                            <h5>Weight</h5>
                         </td>
                         <td>
                             <h5>{data.weight}</h5>
@@ -32,7 +32,7 @@ function ProfileProduct(props) {
                     </tr>
                     <tr>
                         <td>
-                            <h5>Kiểm tra chất lượng</h5>
+                            <h5>Quality Check</h5>
                         </td>
                         <td>
                             <h5>có</h5>
@@ -40,7 +40,7 @@ function ProfileProduct(props) {
                     </tr>
                     <tr>
                         <td>
-                            <h5>Bảo hành</h5>
+                            <h5>Warranty</h5>
                         </td>
                         <td>
                             <h5>có</h5>
