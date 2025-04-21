@@ -203,7 +203,7 @@ function InfoDetailProduct(props) {
                     <p>{arrDetail.description}</p>
                     <div style={{ display: 'flex' }}>
                         <div className="product_count">
-                            <label htmlFor="qty">Số lượng</label>
+                            <label htmlFor="qty">Quantity</label>
                             {/* <input type="text" name="qty" id="sst" maxLength={12} defaultValue={1} title="Quantity:" className="input-text qty" /> */}
                             <input
                                 type="number"
@@ -222,7 +222,7 @@ function InfoDetailProduct(props) {
                                 }}
                                 htmlFor="type"
                             >
-                                Loại sản phẩm
+                                Product Type
                             </label>
                             <select
                                 onChange={(event) => handleSelectDetail(event)}
