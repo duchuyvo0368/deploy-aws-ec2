@@ -18,7 +18,7 @@ function VoucherItem(props) {
                 <div className="border-center"></div>
                 <div className="content-right">
                     <div className="box-content-right">
-                        <span className="name-voucher">{props.typeVoucher}% off</span>
+                        <span className="name-voucher">{props.typeVoucher} off</span>
                         <span className="max-value-voucher">
                             Maximum discount {CommonUtils.formatter.format(props.maxValue)}
                         </span>

@@ -23,7 +23,7 @@ function VoucherItemSmall(props) {
             <div className="border-center"></div>
             <div className="content-right">
                 <div className="box-content-right">
-                    <span className="name-voucher">{props.typeVoucher}% off</span>
+                    <span className="name-voucher">{props.typeVoucher} off</span>
                     <a
                         style={{ cursor: 'pointer' }}
                         onClick={() => handleClickApplyVoucher()}
