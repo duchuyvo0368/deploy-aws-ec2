@@ -6,15 +6,14 @@ import { addShopCartService, deleteItemShopCartService } from '../../services/us
 import DeleteShopCartModal from '../../container/ShopCart/DeleteShopCartModal';
 import CommonUtils from '../../utils/CommonUtils';
 function ShopCartItem(props) {
-    const [quantity, setquantity] = useState('')
-    const [isOpenModal, setisOpenModal] = useState(false)
-    const dispatch = useDispatch()
+    const [quantity, setquantity] = useState('');
+    const [isOpenModal, setisOpenModal] = useState(false);
+    const dispatch = useDispatch();
     let handleOnChange = async (event) => {
-        setquantity(event.target.value)
+        setquantity(event.target.value);
 
-        if (event.target.value === "0") {
-
-            setisOpenModal(true)
+        if (event.target.value === '0') {
+            setisOpenModal(true);
         } else {
             if (event.target.value) {
                 let res = await addShopCartService({
@@ -22,49 +21,46 @@ function ShopCartItem(props) {
                     userId: props.userId,
                     productDetailSizeId: props.productDetailSizeId,
                     quantity: event.target.value,
-                })
+                });
                 if (res && res.errCode === 0) {
-
-
-                    dispatch(getItemCartStart(props.userId))
-
+                    dispatch(getItemCartStart(props.userId));
                 } else {
-                    toast.error(res.errMessage)
-                    setquantity(res.quantity)
+                    toast.error(res.errMessage);
+                    setquantity(res.quantity);
                 }
             }
-
         }
-
-    }
+    };
     useEffect(() => {
-        setquantity(props.quantity)
-    }, [props.quantity])
+        setquantity(props.quantity);
+    }, [props.quantity]);
     let closeModal = () => {
-        setisOpenModal(false)
-        setquantity(1)
-    }
+        setisOpenModal(false);
+        setquantity(1);
+    };
     let handleDeleteShopCart = async () => {
-
         let res = await deleteItemShopCartService({
             data: {
-                id: props.id
-            }
-        })
+                id: props.id,
+            },
+        });
         if (res && res.errCode === 0) {
-            dispatch(getItemCartStart(props.userId))
-            setisOpenModal(false)
+            dispatch(getItemCartStart(props.userId));
+            setisOpenModal(false);
         } else {
-            toast.error(res.errMessage)
+            toast.error(res.errMessage);
         }
-    }
+    };
     return (
         <tr>
-
             <td>
                 <div className="media">
                     <div className="d-flex">
-                        <img style={{ width: '147px', height: '100px', objectFit: 'cover' }} src={props.image} alt="" />
+                        <img
+                            style={{ width: '147px', height: '100px', objectFit: 'cover' }}
+                            src={props.image}
+                            alt=""
+                        />
                     </div>
                     <div className="media-body">
                         <p className="text-justify">{props.name} </p>
@@ -72,30 +68,44 @@ function ShopCartItem(props) {
                 </div>
             </td>
             <td>
-                <h5 >{CommonUtils.formatter.format(props.price)}</h5>
+                <h5>{CommonUtils.formatter.format(props.price)}</h5>
             </td>
             <td style={{ textAlign: 'center' }}>
-                {props.isOrder === true ? <span>{quantity}</span>
-                    :
+                {props.isOrder === true ? (
+                    <span>{quantity}</span>
+                ) : (
                     <div className="product_count">
-                        <input type="number" name="qty" id="sst" value={quantity}
-                            title="Quantity:" className="input-text qty" min="0" onChange={(event) => handleOnChange(event)} />
+                        <input
+                            type="number"
+                            name="qty"
+                            id="sst"
+                            value={quantity}
+                            title="Quantity:"
+                            className="input-text qty"
+                            min="0"
+                            onChange={(event) => handleOnChange(event)}
+                        />
                     </div>
-                }
-
+                )}
             </td>
             <td style={{ textAlign: 'center' }}>
-                <h5 style={{ color: '#71cd14' }}>{CommonUtils.formatter.format(quantity * props.price)}</h5>
+                <h5 style={{ color: '#71cd14' }}>
+                    {CommonUtils.formatter.format(quantity * props.price)}
+                </h5>
             </td>
-            {props.isOrder === false &&
+            {props.isOrder === false && (
                 <>
-                    <td className="link-delete" onClick={() => setisOpenModal(true)}>Xóa</td>
-                    <DeleteShopCartModal handleDeleteShopCart={handleDeleteShopCart} name={props.name} isOpenModal={isOpenModal}
-                        closeModal={closeModal} />
+                    <td className="link-delete" onClick={() => setisOpenModal(true)}>
+                        Remove
+                    </td>
+                    <DeleteShopCartModal
+                        handleDeleteShopCart={handleDeleteShopCart}
+                        name={props.name}
+                        isOpenModal={isOpenModal}
+                        closeModal={closeModal}
+                    />
                 </>
-
-            }
-
+            )}
         </tr>
     );
 }
