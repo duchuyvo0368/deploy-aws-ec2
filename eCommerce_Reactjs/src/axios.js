@@ -4,7 +4,7 @@ require('dotenv').config();
 
 const instance = axios.create({
     baseURL: process.env.REACT_APP_BACKEND_URL || 'https://voduchuy.work.gd/',
-    timeout: 30000, // timeout after 30 seconds
+   // timeout: 30000, // timeout after 30 seconds
     headers: {
         'Content-Type': 'application/json',
     },
